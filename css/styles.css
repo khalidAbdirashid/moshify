@@ -586,7 +586,7 @@ a {
     border: 0;
   }
 }
-/* hero */
+/* hero  blocks*/
 .hero {
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
@@ -633,11 +633,34 @@ a {
   }
 }
 
-/* plans */
+/* plans blocks*/
 .block-plan .grid {
   gap: 8rem 6rem;
 }
 .block-plan .card {
   max-width: 450px;
   margin: 0 auto;
+}
+
+/* feature blocks*/
+.block-feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+.block-feature:first-of-type {
+  margin-top: 6rem;
+}
+.block-feature {
+  gap: 4rem;
+}
+.block-feature__heading {
+  margin: 1rem 0;
+}
+.block-feature__image {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .block-feature:nth-of-type(even) .block-feature__content {
+    order: 2;
+  }
 }
