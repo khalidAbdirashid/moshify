@@ -17,7 +17,7 @@ html {
 }
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--color-body);
 }
@@ -169,7 +169,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  padding: 2rem 4rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -201,8 +201,8 @@ a {
   display: inline-block;
 }
 .btn--stretched {
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 .btn--outline {
   background: #fff;
@@ -243,13 +243,17 @@ a {
   border: none;
   flex-grow: 1;
   padding: 1.5rem 3rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
   .input {
     font-size: 1.5rem;
+  }
+  .input-group .btn {
+    padding: 2rem 4rem;
   }
 }
 
@@ -261,7 +265,7 @@ a {
 }
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 7%;
 }
 .card--primary .card__header {
   background: var(--color-primary);
@@ -296,14 +300,14 @@ a {
   font-size: 6rem;
 }
 .plan__billing-cycle {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
   opacity: 0.8;
   margin-right: 0.5rem;
 }
 .plan__description {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.4rem;
+  font-weight: 300;
   display: block;
   letter-spacing: 1px;
 }
@@ -319,7 +323,7 @@ a {
   display: inline-block;
   position: absolute;
   top: -6px;
-  right: 2%;
+  right: -2%;
 }
 .plan--popular {
   transform: scale(1.05);
@@ -419,16 +423,21 @@ a {
 .testimonial {
   padding: 3rem;
 }
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
 .testimonial__image > img {
   width: 100%;
 }
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
 .testimonial__image > .icon-container {
   position: absolute;
   top: 3rem;
-  right: -30px;
+  right: -32px;
 }
 @media screen and (min-width: 768px) {
   .testimonial .quote,
@@ -437,6 +446,8 @@ a {
   }
   .testimonial .quote {
     margin: 5rem 0 0 6rem;
+    line-height: 1.5;
+    font-size: 2rem;
   }
 }
 
@@ -447,6 +458,9 @@ a {
 }
 .callout__content {
   text-align: center;
+}
+.callout-signup {
+  transform: translateY(5rem);
 }
 .callout--primary {
   background: var(--color-primary);
@@ -467,7 +481,7 @@ a {
   }
   .callout .btn {
     justify-self: start;
-    margin: 0 2rem;
+    margin: 0 5rem;
   }
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
@@ -503,7 +517,7 @@ a {
 
 /* blocks */
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
 }
 .block__heading {
@@ -588,6 +602,7 @@ a {
   }
   .nav__item {
     border: 0;
+    font-size: 1.6rem;
   }
 }
 /* hero  blocks*/
@@ -620,13 +635,14 @@ a {
 }
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
   max-width: 730px;
   margin: 0 auto;
+  color: var(--color-heading);
 }
 @media screen and (min-width: 768px) {
   .block-domain__prices {
@@ -639,7 +655,7 @@ a {
   gap: 8rem 6rem;
 }
 .block-plan .card {
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -706,10 +722,8 @@ a {
   margin-top: 5rem;
   text-align: center;
 }
-img {
-  width: 100%;
-}
 .footer__brand img {
+  width: 100%;
   max-width: 230px;
   margin: 0 auto;
   white-space: nowrap;
